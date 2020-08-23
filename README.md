@@ -1,2 +1,2 @@
-# cthulhu
-CRM-in-Flask
+# Flask-Skeleton
+Branch **base**: Flask, Peewee
