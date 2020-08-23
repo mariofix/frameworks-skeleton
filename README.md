@@ -1,2 +1,2 @@
 # Flask-Skeleton
-Branch **base**: Flask, Peewee
+Branch **base**: Flask, Peewee, Blueprints
