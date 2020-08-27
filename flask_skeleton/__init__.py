@@ -1,5 +1,4 @@
 from flask import Flask
-import config
 
 
 __version__ = "0.0.0"
@@ -12,13 +11,9 @@ def load_blueprints(app):
         app.register_blueprint(routes.blueprint)
 
 
-def create_app():
+def create_app(config):
     app = Flask(__name__, instance_relative_config=False)
-
-    if app.config["ENV"] == "development":
-        app.config.from_object(config.DevConfig)
-    elif app.config["ENV"] == "production":
-        app.config.from_object(config.ProdConfig)
+    app.config.from_object(config)
 
     load_blueprints(app)
 
