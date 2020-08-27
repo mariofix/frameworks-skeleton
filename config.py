@@ -21,7 +21,6 @@ class DevConfig(Config):
     URL: str = f"https://dev.mariofix.com"
     SESSION_COOKIE_SECURE: bool = False
     REMEMBER_COOKIE_SECURE = False
-    DATABASE: str = "sqlite:///cthulhu.db"
 
 
 @dataclass
@@ -29,7 +28,6 @@ class TestConfig(Config):
     URL: str = f"https://dev.mariofix.com"
     SESSION_COOKIE_SECURE: bool = False
     REMEMBER_COOKIE_SECURE = False
-    DATABASE: str = ""
 
 
 @dataclass
@@ -37,7 +35,6 @@ class ProdConfig(Config):
     URL: str = f"https://mariofix.com"
     SESSION_COOKIE_SECURE: bool = True
     REMEMBER_COOKIE_SECURE = True
-    DATABASE: str = ""
 
 
 config = {

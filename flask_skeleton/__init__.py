@@ -1,11 +1,8 @@
 from flask import Flask
 import config
-from peewee import *
-from playhouse.flask_utils import FlaskDB
 
 
-__version__ = "0.1.0"
-db = FlaskDB()
+__version__ = "0.0.0"
 
 
 def load_blueprints(app):
@@ -22,7 +19,6 @@ def create_app():
         app.config.from_object(config.DevConfig)
     elif app.config["ENV"] == "production":
         app.config.from_object(config.ProdConfig)
-    db.init_app(app)
 
     load_blueprints(app)
 
