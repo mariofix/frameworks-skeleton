@@ -1,23 +1,22 @@
-# Frameworks-Skeleton  
-Branch **flask-admin-minimal**: Flask, Flask-Admin. as extension  
-Branch **flask-admin**: Flask, Flask-Admin, Flask-Migrate, Flask-Security  
-Branch **flask-admin-celery**: Flask, Flask-Admin, Flask-Migrate, Flask-Security, Celery  
-Branch **flask-admin-async**: Quart, Flask-Admin  
-Branch **django-code**: Django, Django Baton, Celery  
+# Flask Admin Minimal  
+To be used as a flask extension
 
   
 ## Install
 ```bash
-$ git clone https://github.com/mariofix/flask-skeleton.git -b branch my-project  
-$ cd my-project  
-$ poetry install  
+$ git clone https://github.com/mariofix/flask-skeleton.git -b flask-admin-minimal admin_folder  
+$ rm -rf admin_folder/.git # Remember to remove the git folder  
 ```  
-Optional:
-```bash
-$ git remote rename origin github
-```
 
-## Run
-```bash
-$ poetry run flask run
+## how to use
+```python
+from flask import Flask
+from .admin_folder import admin
+
+def create_app():
+    app = Flask(__name__)
+    admin.init_app(app)
+
+    return app
+
 ```
