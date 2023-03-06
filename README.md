@@ -1,16 +1,15 @@
-# Flask-Skeleton  
-Branch **base**: Flask, Blueprints  
-Branch **base-api**: Flask, Flask-Restful  
-Branch **base-db**: Flask, Peewee  
-Branch **base-core**: Flask, Peewee, *Flask-Security*  
-Branch **cms**: **cms-core**, Flask-Admin
+# Frameworks-Skeleton  
+Branch **flask-admin-minimal**: Flask, Flask-Admin. as extension  
+Branch **flask-admin**: Flask, Flask-Admin, Flask-Migrate, Flask-Security  
+Branch **flask-admin-celery**: Flask, Flask-Admin, Flask-Migrate, Flask-Security, Celery  
+Branch **flask-admin-async**: Quart, Flask-Admin  
+Branch **django-code**: Django, Django Baton, Celery  
+
   
 ## Install
 ```bash
-$ git clone git@github.com:mariofix/flask-skeleton.git my-project  
+$ git clone https://github.com/mariofix/flask-skeleton.git -b branch my-project  
 $ cd my-project  
-$ git ch [-b] [base|base-api|base-db]  
-$ git pull github [base|base-api|base-db]  
 $ poetry install  
 ```  
 Optional:
